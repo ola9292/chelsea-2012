@@ -20,6 +20,7 @@ const myFavoriteFootballTeam = {
       number: 1,
       isCaptain: false,
       nickname: "Big Pete",
+      isMotm:false
     },
     {
       name: "José Bosingwa",
@@ -27,6 +28,7 @@ const myFavoriteFootballTeam = {
       number: 17,
       isCaptain: false,
       nickname: "Bosi",
+      isMotm:false
     },
      {
       name: "David Luiz",
@@ -34,6 +36,7 @@ const myFavoriteFootballTeam = {
       number: 4,
       isCaptain: false,
       nickname: "Sideshow Bob",
+      isMotm:false
     },
     {
       name: "Gary Cahill",
@@ -41,6 +44,7 @@ const myFavoriteFootballTeam = {
       number: 24,
       isCaptain: false,
       nickname: "Gaz",
+      isMotm:false
     },
     {
       name: "Ashley Cole",
@@ -48,6 +52,7 @@ const myFavoriteFootballTeam = {
       number: 3,
       isCaptain: false,
       nickname: "Cashley",
+      isMotm:false
     },
     {
       name: "John Obi Mikel",
@@ -55,6 +60,7 @@ const myFavoriteFootballTeam = {
       number: 12,
       isCaptain: false,
       nickname: "The Enforcer",
+      isMotm:false
     },
     {
         name: "Frank Lampard",
@@ -62,6 +68,7 @@ const myFavoriteFootballTeam = {
         number: 8,
         isCaptain: true,
         nickname: "Super Frank",
+        isMotm:false
       },
     {
       name: "Juan Mata",
@@ -69,6 +76,7 @@ const myFavoriteFootballTeam = {
       number: 10,
       isCaptain: false,
       nickname: "El Mago",
+      isMotm:false
     },
     {
       name: "Ryan Bertrand",
@@ -76,6 +84,7 @@ const myFavoriteFootballTeam = {
       number: 34,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
     {
       name: "Didier Drogba",
@@ -83,6 +92,7 @@ const myFavoriteFootballTeam = {
       number: 11,
       isCaptain: false,
       nickname: "The Ivorian Elephant",
+      isMotm:true,
     },
     {
       name: "Salomon Kalou",
@@ -90,6 +100,7 @@ const myFavoriteFootballTeam = {
       number: 21,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
     {
       name: "Fernando Torres",
@@ -97,6 +108,7 @@ const myFavoriteFootballTeam = {
       number: 9,
       isCaptain: false,
       nickname: "El Niño",
+      isMotm:false
     },
     {
       name: "Michael Essien",
@@ -104,6 +116,7 @@ const myFavoriteFootballTeam = {
       number: 5,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
     {
       name: "John Terry",
@@ -111,6 +124,7 @@ const myFavoriteFootballTeam = {
       number: 26,
       isCaptain: false,
       nickname: "JT",
+      isMotm:false
     },
     {
       name: "Ramires",
@@ -118,6 +132,7 @@ const myFavoriteFootballTeam = {
       number: 7,
       isCaptain: false,
       nickname: "Rambo",
+      isMotm:false
     },
     {
       name: "Branislav Ivanović",
@@ -125,6 +140,7 @@ const myFavoriteFootballTeam = {
       number: 2,
       isCaptain: false,
       nickname: "Brana",
+      isMotm:false
     },
     {
       name: "Raúl Meireles",
@@ -132,6 +148,7 @@ const myFavoriteFootballTeam = {
       number: 16,
       isCaptain: false,
       nickname: "The Beard",
+      isMotm:false
     },
     {
       name: "Paulo Ferreira",
@@ -139,6 +156,7 @@ const myFavoriteFootballTeam = {
       number: 19,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
     {
       name: "Daniel Sturridge",
@@ -146,6 +164,7 @@ const myFavoriteFootballTeam = {
       number: 23,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
     {
       name: "Ross Turnbull",
@@ -153,6 +172,7 @@ const myFavoriteFootballTeam = {
       number: 22,
       isCaptain: false,
       nickname: null,
+      isMotm:false
     },
    
   ],
@@ -206,6 +226,10 @@ playersDropdownList.addEventListener("change", (e) => {
     case "goalkeeper":
       setPlayerCards(
         players.filter((player) => player.position === "goalkeeper")
+      );
+    case "motm":
+      setPlayerCards(
+        players.filter((player) => player.isMotm === true)
       );
       break;
     default:
